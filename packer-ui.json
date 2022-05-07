@@ -29,11 +29,12 @@
       {
           "type": "file",
           "source": "scripts/nginx.conf",
-          "destination": "/etc/nginx/"
+          "destination": "/home/ubuntu"
         },
         {
             "inline": [
-              "sudo mv /home/ubuntu/dist/* /usr/share/nginx/html"
+              "sudo mv /home/ubuntu/dist/* /usr/share/nginx/html",
+              "sudo mv /home/ubuntu/nginx.conf /etc/nginx/"
             ],
             "type": "shell"
           }
