@@ -23,8 +23,13 @@
     },
     {
         "type": "file",
-        "source": "./dist/.",
+        "source": "./dist/",
         "destination": "/usr/share/nginx/html"
-      }]
+      },
+      {
+          "type": "file",
+          "source": "scripts/nginx.conf",
+          "destination": "/etc/nginx"
+        }
   }
   
