@@ -14,16 +14,17 @@
       "ami_name": "petclinic-ui-ami",
       "force_deregister": "true"
     }],
-    "provisioners": [{
-        "type": "file",
-        "source": ".",
-        "destination": "/home/ubuntu"
-      },
+    "provisioners": [
       {
       "type": "shell",
       "scripts": [  "scripts/install_software.sh"   ],
       "execute_command": "{{ .Vars }} sudo -E sh '{{ .Path }}'",
       "pause_before": "10s"
-    }]
+    },
+    {
+        "type": "file",
+        "source": "./dist/*",
+        "destination": "/usr/share/nginx/html"
+      }]
   }
   
