@@ -23,14 +23,20 @@
     },
     {
         "type": "file",
-        "source": "./dist/.",
-        "destination": "/usr/share/nginx/html"
+        "source": "./dist",
+        "destination": "/home/ubuntu"
       },
       {
           "type": "file",
           "source": "scripts/nginx.conf",
           "destination": "/etc/nginx"
-        }
+        },
+        {
+            "inline": [
+              "sudo mv /home/ubuntu/dist/* /usr/share/nginx/html"
+            ],
+            "type": "shell"
+          }
     ]
   }
   
