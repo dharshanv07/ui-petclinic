@@ -29,7 +29,7 @@
       {
           "type": "file",
           "source": "scripts/nginx.conf",
-          "destination": "/etc/nginx"
+          "destination": "/etc/nginx/"
         },
         {
             "inline": [
