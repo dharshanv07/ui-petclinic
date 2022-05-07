@@ -31,5 +31,6 @@
           "source": "scripts/nginx.conf",
           "destination": "/etc/nginx"
         }
+    ]
   }
   
