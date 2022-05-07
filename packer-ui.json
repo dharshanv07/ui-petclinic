@@ -23,7 +23,7 @@
     },
     {
         "type": "file",
-        "source": "./dist/",
+        "source": "./dist/.",
         "destination": "/usr/share/nginx/html"
       },
       {
