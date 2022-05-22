@@ -2,6 +2,7 @@ version: 0.2
 
 phases:
   install:
+    on-failure: ABORT
     runtime-versions:
         nodejs: latest
     commands:
@@ -12,9 +13,10 @@ phases:
         - sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
         - sudo apt-get update && sudo apt-get install packer
   build:
+    on-failure: ABORT
     commands:
         - echo Build started 
-        - ng build --prod
+        - ng build
         - packer build -machine-readable ./packer-ui.json
   post_build:
     commands:
